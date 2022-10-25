@@ -4,12 +4,17 @@ import matplotlib.cm as cm
 from matplotlib import pyplot as plt
 from keras.models import Sequential
 from keras.layers import Activation, Dropout, Flatten, Dense, Conv1D
-from keras.layers import GRU, TimeDistributed, Embedding
-# from keras.layers.recurrent import GRU
-# from keras.layers.wrappers import TimeDistributed
-from keras.utils import pad_sequences
-# from keras.preprocessing.sequence import pad_sequences
-# from keras.layers.embeddings import Embedding
+
+# TF2
+# from keras.layers import GRU, TimeDistributed, Embedding
+# from keras.utils import pad_sequences
+
+# TF1
+from keras.layers.recurrent import GRU
+from keras.layers.wrappers import TimeDistributed
+from keras.preprocessing.sequence import pad_sequences
+from keras.layers.embeddings import Embedding
+
 from sklearn.metrics import confusion_matrix, accuracy_score
 from conlleval import conlleval
 
